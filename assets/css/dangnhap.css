@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contact{
+    position: relative;
+    min-width: 100vh;
+    min-height: 100vh;
+    padding: 50px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url("/assets/img/background.jpg");
+    background-size: cover;
+}
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+}
+.contact .content h2{
+    font-size: 36px;
+    font-weight: 500;
+    color: #fff;
+}
+.contact .content p{
+    font-weight: 500;
+    color: #fff;
+}
+.containers{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.containers .contactinfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.containers .contactinfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.containers .contactinfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+.containers .contactinfo .box:hover .icon{
+    background: #e91e63;
+}
+.containers .contactinfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+.containers.contactinfo .box .text h3{
+    font-weight: 500;
+    color: #00bcd4;
+}
+.contactform h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+.contactform .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contactform .inputBox input{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin:10px 0 ;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+.contactform .inputBox span{
+    position: relative;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.contactform .inputBox input:focus ~ span,
+.contactform .inputBox input:valid ~ span
+{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactform .inputBox textarea:focus ~ span,
+.contactform .inputBox textarea:valid ~ span
+{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-30px);
+}
+.contactform .inputBox input [type="submit"]{
+    width: 100px;
+    background: #00bcd4;
+    color: #181616;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+@media (max-width : 991px){
+    .contact{
+        padding: 50px;
+    }
+    .containers{
+        flex-direction: column;
+    }
+    .containers .contactinfo{
+        margin-bottom: 20px;
+    }
+    .containers .contactinfo{
+        width: 100%;
+    }
+    .containers .contactform{
+        width: 90%;
+        left: 0px;
+        margin: 0;
+    }
+}
+#wrapper{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#form-login{
+    max-width: 400px;
+    background: rgba(161, 28, 141, 0.7);
+    flex-grow: 1;
+    padding: 30px 30px 40px;
+    box-shadow: 0px 0px 17px 2px rgba(255, 255, 255, 0.8);
+}
+.form-heading{
+    font-size: 25px;
+    color: #f5f5f5;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.form-group{
+    border-bottom: 1px solid #fff;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    display: flex;
+}
+.form-group i{
+    color: #fff;
+    font-size: 14px;
+    padding-top: 5px;
+    padding-right: 10px;
+}
+.form-input{
+    background: transparent;
+    border: 0;
+    outline: 0;
+    color: #f5f5f5;
+    flex-grow: 1;
+}
+.form-input::placeholder{
+    color: #f5f5f5;
+}
+#eye i{
+    padding-right: 0;
+    cursor: pointer;
+}
+.form-submit{
+    background: #f5f5f5;
+    border: 1px solid #f5f5f5;
+    color: #010101;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 6px 10px;
+    transition: 0.25s ease-in-out;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.form-submit:hover{
+    border: 1px solid #54a0ff;
+}
+.signup__registerButton {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: rgb(253, 244, 244);
+    font-size: 1rem;
+    cursor: pointer;
+    display: block;
+  }

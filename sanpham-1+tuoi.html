@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/sanpham.css">
+    <link rel="stylesheet" href="./assets/css/trangchu.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-6.3.0-web/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="grid">
+                <nav class="header__navbar">
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--seperate">
+                            Vào cửa hàng trên ứng dụng Shopee
+
+                            <!-- HEADER QR CODE -->
+                            <div class="header__qr">
+                                <img src="./assets/img/qr_code.png" alt="QR-code" class="header__qr-img">
+                                <div class="header__qr-apps">
+                                    <a href="" class="header__qr-link">
+                                        <img src="./assets/img/ggplay.png" alt="GGplay" class="header__qr-download-img">   
+                                    </a>
+                                    <a href="" class="header__qr-link">
+                                        <img src="./assets/img/appstore.png" alt="Appstore" class="header__qr-download-img">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="header__navbar-item">
+                            <span class="header__navbar-title--no-pointer">Kết nối</span>
+                            <a href="" class="header__navbar-icon-link">
+                                <i class="header__navbar-icon fa-brands fa-facebook"></i>
+                            </a>
+
+                            <a href="" class="header__navbar-icon-link">
+                                <i class="header__navbar-icon fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+    
+                    <ul class="header__navbar-list">
+                        
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link">
+                                <i class="header__navbar-icon fa-regular fa-circle-question"></i>
+                                Trợ giúp
+                            </a>
+                        </li>
+                        <li class="header__navbar-item header__navbar-item--strong header__navbar-item--seperate"><a href="đăng ki.html" style="text-decoration: none; color: var(--white-color);">Đăng kí</a></li>
+                        <li class="header__navbar-item header__navbar-item--strong"><a href="dangnhap.html" style="text-decoration: none; color: var(--white-color);">Đăng nhập</a></li>
+
+
+                        <!-- <li class="header__navbar-item header__navbar-user">
+                            <img src="./assets/img/qr_code.png" alt="" class="header__navbar-user-img">
+                            <span class="header__navbar-user-name">Bá Ngọc</span>
+
+                            <ul class="header__navbar-user-menu">
+                                <li class="header__navbar-user-item">
+                                    <a href="">Tài khoản của tôi</a>
+                                </li>
+                                <li class="header__navbar-user-item">
+                                    <a href="">Địa chỉ của tôi</a>
+                                </li>
+                                <li class="header__navbar-user-item">
+                                    <a href="">Đơn mua</a>
+                                </li>
+                                <li class="header__navbar-user-item header__navbar-user-item--separate">
+                                    <a href="">Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </li> -->
+                    </ul>
+                    
+                </nav>
+
+                <!-- header with search -->
+                <div class="header-with-search">
+                    <div class="header__logo">
+                        <a href="/" class="header__logo-link">
+                            <img src="./assets/img/logo.png" alt="" class="header__logo-img">
+                        </a>
+                    </div>
+
+
+                    <div class="header__search">
+                        <div class="header__search-input-wrap">
+                            <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm sản phẩm">
+
+                            <!-- search history -->
+                            <div class="header__search-history">
+                                <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                            </div>
+                        </div>
+                        
+                        <button class="header__search-btn">
+                            <i class="header__search-btn-icon fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+
+                    <!-- cart layout -->
+                    <div class="header__cart">
+                        <div class="header__cart-wrap">
+                            <i class="header__cart-icon fas fa-shopping-cart"></i>
+                            <span class="header__cart-notice">0</span>
+
+                            <!-- No cart:header__cart-list--no-cart  -->
+                            <div class="header__cart-list header__cart-list--no-cart">
+                                <img src="./assets/img/no-cart.png" alt="" class="header__cart-no-cart-img">
+                                <span class="header__cart-list-no-cart-msg">Chưa có sản phẩm</span>
+                            </div>
+
+                            <div class="header__cart-list header__cart-list--yes-cart" >
+                                <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
+                                <ul class="header__cart-list-item">
+
+                                    
+                                    <!-- Cart item -->
+                                    <!-- <li class="header__cart-item">
+                                        <img src="./assets/img/qr_code.png" alt="" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name"></h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price"></span>
+                                                    <span class="header__cart-item-multiply"></span>
+                                                    <input type="number" class="header__cart-item-quantity" value="1">
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại: Bạc
+                                                </span>
+                                                <button class="header__cart-item-remove">Xóa</button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="./assets/img/qr_code.png" alt="" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name"></h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price"></span>
+                                                    <span class="header__cart-item-multiply">X</span>
+                                                    <input type="number" class="header__cart-item-quantity" value="1">
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại: Bạc
+                                                </span>
+                                                <button class="header__cart-item-remove">Xóa</button>
+                                            </div>
+                                        </div>
+                                    </li> -->
+                                    
+                                </ul>
+                                <div class="header__cart-total">
+                                    <strong class="cart-total-title">Tổng Cộng:</strong>
+                                    <span class="cart-total-price">3223000VNĐ</span>
+                                </div>
+                                <button class="header__cart-view-cart butn btn--primary">Thanh toán</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <nav class="navi">
+            <ul class="navi__list">
+                <li class="navi__item">
+                    <a href="trangchu.html" class="navi__item-link" >Trang chủ</a>
+                </li>
+                <li class="navi__item">
+                    <a href="sanpham.html" class="navi__item-link">Sản phẩm</a>
+                </li>
+                <li class="navi__item">
+                    <a href="blog.html" class="navi__item-link">Blog</a>
+                </li>
+                <li class="navi__item">
+                    <a href="lienhe.html" class="navi__item-link">Liên hệ</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="slider">
+            <img src="./assets/img/slider-home.jpg" alt="" class="slider-img">
+            <div class="slider__info">
+                <div class="slider__info-heading">Sản Phẩm Thức Ăn Cho Mèo Whiskas®</div>
+                <div class="slider__info-description">Thức ăn cho mèo Whiskas® có hương vị tuyệt vời, cung cấp đầy đủ các dưỡng chất, vitamin và khoáng chất mà mèo cần cho cả ngày năng động.</div>
+                <a style="text-decoration:none" href= '#main__shop'>
+                    <button class="butn slider__info-btn">Mua sắm ngay!</button>
+                </a>
+            </div>
+        </div>
+
+        <div id="main__shop" class="app__container">
+            <div class="grid">
+                <div class="app__content grid__row">
+                    <div class="grid__column-2">
+                        <nav class="category">
+                            <h3 class="category__heading">Danh mục</h3>
+            
+                            <ul class="category-list">
+                                <li class="category-item ">
+                                    <a href="sanpham.html" class="category-item__link">Tất cả sản phẩm</a>
+                                </li>
+                                <li class="category-item category-item--active">
+                                    <a href="sanpham-1+tuoi.html" class="category-item__link">1+ tuổi</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="sanpham-meocon.html" class="category-item__link">Mèo con</a>
+                                </li>
+                                <li class="category-item ">
+                                    <a href="sanpham-kho.html" class="category-item__link">Thức ăn khô</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="sanpham-uot.html" class="category-item__link">Thức ăn ướt</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="sanpham-mix.html" class="category-item__link">Tasty Mix</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+    
+                    <div class="grid__column-10">
+                        <div class="home-filter">
+                            <span class="home-filter__title">Sắp xếp theo</span>
+
+                            <div class="select-input">
+                                <span class="select-input__label">Giá</span>
+                                <i class="select-input__icon fa-solid fa-angle-down"></i>
+
+                                <!-- list option -->
+                                <ul class="select-input__list">
+                                    <li class="select-input__item">
+                                        <a href="" class="select-input__link">Giá: Thấp đến Cao</a>
+                                    </li>
+                                    <li class="select-input__item">
+                                        <a href="" class="select-input__link">Giá: Cao đến Thấp</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="home-filter__page">
+                                <span class="home-filter__page-num">
+                                    <span class="home-filter__page-current">1</span>/1
+                                </span>
+                                
+                                <div class="home-filter__page-control">
+                                    <a href="" class="home-filter__page-btn home-filter__page-btn--disable">
+                                        <i class="home-filter__page-icon fa-solid fa-angle-left"></i>
+                                    </a>
+                                    <a href="" class="home-filter__page-btn">
+                                        <i class="home-filter__page-icon fa-solid fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="home-product">
+                            <div class="grid__row">
+                                <!-- product item -->
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item">
+                                        <div class="home-product-item__img" style="background-image: url(./assets/img/product/kho/1+tuoi-kho-cabien-1\,2kg.jpeg);"></div>
+                                        <h4 class="home-product-item__name">Thức ăn mèo Whiskas vị cá biển túi 1.2kg</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">150,000đ</span>
+                                            <span class="home-product-item__price-new">125,000đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__liked">
+                                                <i class="home-product-item__like-icon fa-regular fa-heart"></i>
+                                                <i class="home-product-item__liked-icon fa-solid fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">88 đã bán</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Whiskas</span>
+                                            <span class="home-product-item__origin-name">Việt Nam</span>
+                                        </div>
+                                        <div class="home-product-item__favorite">
+                                            <i class="fa-solid fa-check"></i>
+                                            Yêu thích
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">43%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                    <button style="margin-top:-4px ;" class="btn-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item">
+                                        <div class="home-product-item__img" style="background-image: url(./assets/img/product/kho/1+tuoi-kho-cabien-3kg.jpeg);"></div>
+                                        <h4 class="home-product-item__name">WHISKAS® Thức ăn cho mèo lớn dạng hạt vị cá biển 3kg (1 túi)</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">300,000đ</span>
+                                            <span class="home-product-item__price-new">285,000đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__liked">
+                                                <i class="home-product-item__like-icon fa-regular fa-heart"></i>
+                                                <i class="home-product-item__liked-icon fa-solid fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">88 đã bán</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Whiskas</span>
+                                            <span class="home-product-item__origin-name">Việt Nam</span>
+                                        </div>
+                                        <div class="home-product-item__favorite">
+                                            <i class="fa-solid fa-check"></i>
+                                            Yêu thích
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">43%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                    <button style="margin-top:-4px ;" class="btn-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item">
+                                        <div class="home-product-item__img" style="background-image: url(./assets/img/product/kho/1+tuoi-kho-cabien-400g.jpeg);"></div>
+                                        <h4 class="home-product-item__name">Thức ăn mèo Whiskas vị cá biển túi 400g</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">50,000đ</span>
+                                            <span class="home-product-item__price-new">34,500đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__liked">
+                                                <i class="home-product-item__like-icon fa-regular fa-heart"></i>
+                                                <i class="home-product-item__liked-icon fa-solid fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">88 đã bán</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Whiskas</span>
+                                            <span class="home-product-item__origin-name">Việt Nam</span>
+                                        </div>
+                                        <div class="home-product-item__favorite">
+                                            <i class="fa-solid fa-check"></i>
+                                            Yêu thích
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">43%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                    <button style="margin-top:-4px ;" class="btn-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item">
+                                        <div class="home-product-item__img" style="background-image: url(./assets/img/product/kho/1+tuoi-kho-cabien-480g.jpeg);"></div>
+                                        <h4 class="home-product-item__name">Thức ăn mèo Whiskas vị cá biển túi 480g</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">60,000đ</span>
+                                            <span class="home-product-item__price-new">52,900đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__liked">
+                                                <i class="home-product-item__like-icon fa-regular fa-heart"></i>
+                                                <i class="home-product-item__liked-icon fa-solid fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">88 đã bán</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Whiskas</span>
+                                            <span class="home-product-item__origin-name">Việt Nam</span>
+                                        </div>
+                                        <div class="home-product-item__favorite">
+                                            <i class="fa-solid fa-check"></i>
+                                            Yêu thích
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">43%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                    <button style="margin-top:-4px ;" class="btn-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item">
+                                        <div class="home-product-item__img" style="background-image: url(./assets/img/product/kho/1+tuoi-kho-cangu-1\,2kg.jpeg);"></div>
+                                        <h4 class="home-product-item__name">WHISKAS® Thức ăn cho mèo lớn dạng hạt vị cá ngừ 1.2kg (1 túi)</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">140,000đ</span>
+                                            <span class="home-product-item__price-new">125,000đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__liked">
+                                                <i class="home-product-item__like-icon fa-regular fa-heart"></i>
+                                                <i class="home-product-item__liked-icon fa-solid fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">88 đã bán</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Whiskas</span>
+                                            <span class="home-product-item__origin-name">Việt Nam</span>
+                                        </div>
+                                        <div class="home-product-item__favorite">
+                                            <i class="fa-solid fa-check"></i>
+                                            Yêu thích
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">43%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                    <button style="margin-top:-4px ;" class="btn-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item">
+                                        <div class="home-product-item__img" style="background-image: url(./assets/img/product/kho/1+tuoi-kho-cangu-480g.jpeg);"></div>
+                                        <h4 class="home-product-item__name">Thức ăn mèo Whiskas vị cá ngừ túi 480g</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">65,000đ</span>
+                                            <span class="home-product-item__price-new">52,900đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__liked">
+                                                <i class="home-product-item__like-icon fa-regular fa-heart"></i>
+                                                <i class="home-product-item__liked-icon fa-solid fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">88 đã bán</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Whiskas</span>
+                                            <span class="home-product-item__origin-name">Việt Nam</span>
+                                        </div>
+                                        <div class="home-product-item__favorite">
+                                            <i class="fa-solid fa-check"></i>
+                                            Yêu thích
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">43%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                    <button style="margin-top:-4px ;" class="btn-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item">
+                                        <div class="home-product-item__img" style="background-image: url(./assets/img/product/kho/1+tuoi-kho-cathu-1\,2kg.jpeg);"></div>
+                                        <h4 class="home-product-item__name">WHISKAS® Thức ăn cho mèo lớn dạng hạt vị cá thu 1.2kg (1 túi)</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">150,000đ</span>
+                                            <span class="home-product-item__price-new">125,000đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__liked">
+                                                <i class="home-product-item__like-icon fa-regular fa-heart"></i>
+                                                <i class="home-product-item__liked-icon fa-solid fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">88 đã bán</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Whiskas</span>
+                                            <span class="home-product-item__origin-name">Việt Nam</span>
+                                        </div>
+                                        <div class="home-product-item__favorite">
+                                            <i class="fa-solid fa-check"></i>
+                                            Yêu thích
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">43%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                    <button style="margin-top:-4px ;" class="btn-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item">
+                                        <div class="home-product-item__img" style="background-image: url(./assets/img/product/kho/1+tuoi-kho-cathu-400g.jpeg);"></div>
+                                        <h4 class="home-product-item__name">Thức ăn cho mèo Whiskas vị cá thu túi 400g</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">50,000đ</span>
+                                            <span class="home-product-item__price-new">34,500đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__liked">
+                                                <i class="home-product-item__like-icon fa-regular fa-heart"></i>
+                                                <i class="home-product-item__liked-icon fa-solid fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">88 đã bán</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Whiskas</span>
+                                            <span class="home-product-item__origin-name">Việt Nam</span>
+                                        </div>
+                                        <div class="home-product-item__favorite">
+                                            <i class="fa-solid fa-check"></i>
+                                            Yêu thích
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">43%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                    <button style="margin-top:-4px ;" class="btn-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                                
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item">
+                                        <div class="home-product-item__img" style="background-image: url(./assets/img/product/uot/1+tuoi-uot-24goimix.jpeg);"></div>
+                                        <h4 class="home-product-item__name">Bộ 24 Túi Thức Ăn Dạng Sốt Cho Mèo Trưởng Thành WHISKAS Mix 6 Vị 80G</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">450,000đ</span>
+                                            <span class="home-product-item__price-new">300,000đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__liked">
+                                                <i class="home-product-item__like-icon fa-regular fa-heart"></i>
+                                                <i class="home-product-item__liked-icon fa-solid fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">88 đã bán</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Whiskas</span>
+                                            <span class="home-product-item__origin-name">Việt Nam</span>
+                                        </div>
+                                        <div class="home-product-item__favorite">
+                                            <i class="fa-solid fa-check"></i>
+                                            Yêu thích
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">43%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                    <button style="margin-top:-4px ;" class="btn-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item">
+                                        <div class="home-product-item__img" style="background-image: url(./assets/img/product/uot/1+tuoi-uot-cabien-400g.jpeg);"></div>
+                                        <h4 class="home-product-item__name">Thức Ăn Cho Mèo Trưởng Thành Dạng Pate WHISKAS Vị Cá Biển 400G (1 Lon)</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">50,000đ</span>
+                                            <span class="home-product-item__price-new">43,200đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__liked">
+                                                <i class="home-product-item__like-icon fa-regular fa-heart"></i>
+                                                <i class="home-product-item__liked-icon fa-solid fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">88 đã bán</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Whiskas</span>
+                                            <span class="home-product-item__origin-name">Việt Nam</span>
+                                        </div>
+                                        <div class="home-product-item__favorite">
+                                            <i class="fa-solid fa-check"></i>
+                                            Yêu thích
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">43%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                    <button style="margin-top:-4px ;" class="btn-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item">
+                                        <div class="home-product-item__img" style="background-image: url(./assets/img/product/uot/1+tuoi-uot-cangu-400g.jpeg);"></div>
+                                        <h4 class="home-product-item__name">Thức Ăn Cho Mèo Trưởng Thành Dạng Pate WHISKAS Vị Cá Ngừ 400G (1 Lon)</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">50,000đ</span>
+                                            <span class="home-product-item__price-new">43,200đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__liked">
+                                                <i class="home-product-item__like-icon fa-regular fa-heart"></i>
+                                                <i class="home-product-item__liked-icon fa-solid fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">88 đã bán</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Whiskas</span>
+                                            <span class="home-product-item__origin-name">Việt Nam</span>
+                                        </div>
+                                        <div class="home-product-item__favorite">
+                                            <i class="fa-solid fa-check"></i>
+                                            Yêu thích
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">43%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                    <button style="margin-top:-4px ;" class="btn-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item">
+                                        <div class="home-product-item__img" style="background-image: url(./assets/img/product/uot/1+tuoi-uot-cangu-80g-6goi.jpeg);"></div>
+                                        <h4 class="home-product-item__name">Bộ 6 Túi Thức Ăn Cho Mèo Trưởng Thành WHISKAS Dạng Sốt Vị Cá Ngừ, 80g</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">80,000đ</span>
+                                            <span class="home-product-item__price-new">75,000đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__liked">
+                                                <i class="home-product-item__like-icon fa-regular fa-heart"></i>
+                                                <i class="home-product-item__liked-icon fa-solid fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">88 đã bán</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Whiskas</span>
+                                            <span class="home-product-item__origin-name">Việt Nam</span>
+                                        </div>
+                                        <div class="home-product-item__favorite">
+                                            <i class="fa-solid fa-check"></i>
+                                            Yêu thích
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">43%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                    <button style="margin-top:-4px ;" class="btn-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item">
+                                        <div class="home-product-item__img" style="background-image: url(./assets/img/product/uot/1+tuoi-uot-cangu\,catrang-80g-12goi.jpeg);"></div>
+                                        <h4 class="home-product-item__name">Bộ 12 Túi Thức Ăn Dạng Sốt Cho Mèo Trưởng Thành WHISKAS Vị Cá Ngừ và Cá Thịt Trắng 80G</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">160,000đ</span>
+                                            <span class="home-product-item__price-new">150,000đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__liked">
+                                                <i class="home-product-item__like-icon fa-regular fa-heart"></i>
+                                                <i class="home-product-item__liked-icon fa-solid fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">88 đã bán</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Whiskas</span>
+                                            <span class="home-product-item__origin-name">Việt Nam</span>
+                                        </div>
+                                        <div class="home-product-item__favorite">
+                                            <i class="fa-solid fa-check"></i>
+                                            Yêu thích
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">43%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                    <button style="margin-top:-4px ;" class="btn-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item">
+                                        <div class="home-product-item__img" style="background-image: url(./assets/img/product/uot/1+tuoi-uot-cathu-80g-6goi.jpeg);"></div>
+                                        <h4 class="home-product-item__name">Bộ 6 Túi Thức Ăn Cho Mèo Trưởng Thành WHISKAS Dạng Sốt Vị Cá Thu, 80g</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">90,000đ</span>
+                                            <span class="home-product-item__price-new">75,000đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__liked">
+                                                <i class="home-product-item__like-icon fa-regular fa-heart"></i>
+                                                <i class="home-product-item__liked-icon fa-solid fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">88 đã bán</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Whiskas</span>
+                                            <span class="home-product-item__origin-name">Việt Nam</span>
+                                        </div>
+                                        <div class="home-product-item__favorite">
+                                            <i class="fa-solid fa-check"></i>
+                                            Yêu thích
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">43%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                    <button style="margin-top:-4px ;" class="btn-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item">
+                                        <div class="home-product-item__img" style="background-image: url(./assets/img/product/mix/tastymix.jpeg);"></div>
+                                        <h4 class="home-product-item__name">WHISKAS® Tasty Mix Thức ăn cho mèo lớn dạng sốt 70g (mix vị)</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">500,000đ</span>
+                                            <span class="home-product-item__price-new">432,000đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__liked">
+                                                <i class="home-product-item__like-icon fa-regular fa-heart"></i>
+                                                <i class="home-product-item__liked-icon fa-solid fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">88 đã bán</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Whiskas</span>
+                                            <span class="home-product-item__origin-name">Việt Nam</span>
+                                        </div>
+                                        <div class="home-product-item__favorite">
+                                            <i class="fa-solid fa-check"></i>
+                                            Yêu thích
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">43%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                    <button style="margin-top:-4px ;" class="btn-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item">
+                                        <div class="home-product-item__img" style="background-image: url(./assets/img/product/mix/1+tuoi-mix-cangu\,thanhcua\,carot-70g.jpeg);"></div>
+                                        <h4 class="home-product-item__name">WHISKAS® Tasty Mix Thức ăn cho mèo lớn dạng sốt 70g (Cá Ngừ, Thanh Cua)</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">200,000đ</span>
+                                            <span class="home-product-item__price-new">173,000đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__liked">
+                                                <i class="home-product-item__like-icon fa-regular fa-heart"></i>
+                                                <i class="home-product-item__liked-icon fa-solid fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">88 đã bán</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Whiskas</span>
+                                            <span class="home-product-item__origin-name">Việt Nam</span>
+                                        </div>
+                                        <div class="home-product-item__favorite">
+                                            <i class="fa-solid fa-check"></i>
+                                            Yêu thích
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">43%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                    <button style="margin-top:-4px ;" class="btn-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item">
+                                        <div class="home-product-item__img" style="background-image: url(./assets/img/product/mix/1+tuoi-mix-ga\,cahoi\,rongbien-70g.jpeg);"></div>
+                                        <h4 class="home-product-item__name">WHISKAS® Tasty Mix Thức ăn cho mèo lớn dạng sốt 70g (Cá Hồi, Gà, Rong Biển)</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">200,000đ</span>
+                                            <span class="home-product-item__price-new">173,000đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__liked">
+                                                <i class="home-product-item__like-icon fa-regular fa-heart"></i>
+                                                <i class="home-product-item__liked-icon fa-solid fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">88 đã bán</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Whiskas</span>
+                                            <span class="home-product-item__origin-name">Việt Nam</span>
+                                        </div>
+                                        <div class="home-product-item__favorite">
+                                            <i class="fa-solid fa-check"></i>
+                                            Yêu thích
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">43%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                    <button style="margin-top:-4px ;" class="btn-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item">
+                                        <div class="home-product-item__img" style="background-image: url(./assets/img/product/mix/1+tuoi-mix-ga\,cangu\,carot-70g.jpeg);"></div>
+                                        <h4 class="home-product-item__name">WHISKAS® Tasty Mix Thức ăn cho mèo lớn dạng sốt 70g (Gà, Cá Ngừ, Cà Rốt)</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">200,000đ</span>
+                                            <span class="home-product-item__price-new">173,000đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__liked">
+                                                <i class="home-product-item__like-icon fa-regular fa-heart"></i>
+                                                <i class="home-product-item__liked-icon fa-solid fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">88 đã bán</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Whiskas</span>
+                                            <span class="home-product-item__origin-name">Việt Nam</span>
+                                        </div>
+                                        <div class="home-product-item__favorite">
+                                            <i class="fa-solid fa-check"></i>
+                                            Yêu thích
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">43%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                    <button style="margin-top:-4px ;" class="btn-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item">
+                                        <div class="home-product-item__img" style="background-image: url(./assets/img/product/mix/1+tuoi-mix-haisan\,rongbien-70g.jpeg);"></div>
+                                        <h4 class="home-product-item__name">WHISKAS® Tasty Mix Thức ăn cho mèo lớn dạng sốt 70g (Hải Sản, Rong Biển)</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">200,000đ</span>
+                                            <span class="home-product-item__price-new">173,000đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__liked">
+                                                <i class="home-product-item__like-icon fa-regular fa-heart"></i>
+                                                <i class="home-product-item__liked-icon fa-solid fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star--gold fa-solid fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">88 đã bán</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Whiskas</span>
+                                            <span class="home-product-item__origin-name">Việt Nam</span>
+                                        </div>
+                                        <div class="home-product-item__favorite">
+                                            <i class="fa-solid fa-check"></i>
+                                            Yêu thích
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">43%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+                                    </a>
+                                    <button style="margin-top:-4px ;" class="btn-cart">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- <ul class="pagination home-product-pagination">
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">
+                                    <i class="pagination-item__icon fas fa-angle-left"></i>
+                                </a>
+                            </li>
+                            <li class="pagination-item pagination-item--active">
+                                <a href="" class="pagination-item__link">1</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">2</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">3</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">4</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">5</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">...</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">14</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">
+                                    <i class="pagination-item__icon fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">Chăm sóc khách hàng</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Trung tâm trợ giúp</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Whiskas mall</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Hướng dẫn mua hàng</a>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">Giới thiệu</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Giới thiệu</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Tuyển dụng</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Điều khoản</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">Danh mục</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">1+ tuổi</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Mèo con</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Thức ăn khô</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Thức ăn ướt</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="sanpham-mix.html" class="footer-item__link">Tasty Mix</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">Theo dõi</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-item__icon fa-brands fa-facebook"></i>
+                                    Facebook
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-item__icon fa-brands fa-instagram"></i>
+                                    Instagram
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
+                        <div class="footer__download">
+                            <img src="./assets/img/qr_code.png" alt="" class="footer__download-qr">
+                            <div class="footer__download-apps">
+                                <a href="" class="footer__download-app-link">
+                                    <img src="./assets/img/appstore.png" alt="" class="footer__download-app-img">
+                                </a>
+                                <a href="" class="footer__download-app-link">
+                                    <img src="./assets/img/ggplay.png" alt="" class="footer__download-app-img">
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    
+                </div>
+
+            </div>
+            <div class="footer__bottom">
+                <div class="grid">
+                    <p class="footer__text">2023 - Bản quyền thuộc về Công ty Whiskas</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- modal layout -->
+        <div class="modal">
+            <div class="modal__overlay">
+
+            </div>
+            <div class="modal__body">
+                    
+                <!-- đăng kí form cả đăng kí và đăng nhập -->
+                <div class="auth-form">
+                    <div class="auth-form__container">
+                        <div class="auth-fotm__header">
+                            <h3 class="auth-form__heading">Đăng ký</h3>
+                            <span class="auth-form__switch-btn">Đăng nhập</span>
+                        </div>
+
+                        <div class="auth-form__form">
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" placeholder="Email của bạn">
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="Mật khẩu của bạn">
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" placeholder="Nhập lại mật khẩu">
+                            </div>
+                        </div>
+
+
+                        <div class="auth-form__aside">
+                            <p class="auth-form__policy-text">
+                                Bằng việc đăng kí, bạn đã đồng ý với Shopee về 
+                                <a href="" class="auth-form__text-link">Điều khoản dịch vụ</a> &
+                                <a href="" class="auth-form__text-link">Chính sách bảo mật</a>
+                            </p>
+                        </div>
+
+
+                        <div class="auth-form__controls">
+                            <button class="btn auth-form__control-back btn--normal">TRỞ LẠI</button>
+                            <button class="btn btn--primary">ĐĂNG KÍ</button>
+                        </div>
+                    </div>
+
+
+                    <div class="auth-form__socials">
+                        <a href="" class="auth-form__socials--facebook btn btn--size-s btn--width-icon">
+                            <i class="auth-form__socials-icon fa-brands fa-square-facebook"></i>
+                            <span class="auth-form__socials--title">
+                                Kết nối với Facebook
+                            </span>
+                        </a>
+                        <a href="" class="auth-form__socials--google btn btn--size-s btn--width-icon">
+                            <i class="auth-form__socials-icon fa-brands fa-google"></i>
+                            <span class="auth-form__socials--title">
+                                Kết nối với Google
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- login form -->
+                <!-- <div class="auth-form">
+                    <div class="auth-form__container">
+                        <div class="auth-fotm__header">
+                            <h3 class="auth-form__heading">Đăng nhập</h3>
+                            <span class="auth-form__switch-btn">Đăng ký</span>
+                        </div>
+
+                        <div class="auth-form__form">
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" placeholder="Email của bạn">
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="Mật khẩu của bạn">
+                            </div>
+                        </div>
+
+
+                        <div class="auth-form__aside">
+                            <div class="auth-form__help">
+                                <a href="" class="auth-form__help-link auth-form__help-forgot ">Quên mật khẩu</a>
+                                <span class="auth-form__help-seperate"></span>
+                                <a href="" class="auth-form__help-link">Cần trợ giúp?</a>
+                            </div>
+                        </div>
+
+
+                        <div class="auth-form__controls">
+                            <button class="btn auth-form__control-back btn--normal">TRỞ LẠI</button>
+                            <button class="btn btn--primary">ĐĂNG NHẬP</button>
+                        </div>
+                    </div>
+
+
+                    <div class="auth-form__socials">
+                        <a href="" class="auth-form__socials--facebook btn btn--size-s btn--width-icon">
+                            <i class="auth-form__socials-icon fa-brands fa-square-facebook"></i>
+                            <span class="auth-form__socials--title">
+                                Kết nối với Facebook
+                            </span>
+                        </a>
+                        <a href="" class="auth-form__socials--google btn btn--size-s btn--width-icon">
+                            <i class="auth-form__socials-icon fa-brands fa-google"></i>
+                            <span class="auth-form__socials--title">
+                                Kết nối với Google
+                            </span>
+                        </a>
+                    </div>
+                </div> -->
+
+                
+            </div>
+        </div>
+    </div>
+    <script src="./jvs.js"></script>
+</body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/sanpham.css">
+    <link rel="stylesheet" href="./assets/css/trangchu.css">
+    <link rel="stylesheet" href="./assets/css/blog.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-6.3.0-web/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <div class="grid">
+            <nav class="header__navbar">
+                <ul class="header__navbar-list">
+                    <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--seperate">
+                        Vào cửa hàng trên ứng dụng Shopee
+
+                        <!-- HEADER QR CODE -->
+                        <div class="header__qr">
+                            <img src="./assets/img/qr_code.png" alt="QR-code" class="header__qr-img">
+                            <div class="header__qr-apps">
+                                <a href="" class="header__qr-link">
+                                    <img src="./assets/img/ggplay.png" alt="GGplay" class="header__qr-download-img">   
+                                </a>
+                                <a href="" class="header__qr-link">
+                                    <img src="./assets/img/appstore.png" alt="Appstore" class="header__qr-download-img">
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="header__navbar-item">
+                        <span class="header__navbar-title--no-pointer">Kết nối</span>
+                        <a href="" class="header__navbar-icon-link">
+                            <i class="header__navbar-icon fa-brands fa-facebook"></i>
+                        </a>
+
+                        <a href="" class="header__navbar-icon-link">
+                            <i class="header__navbar-icon fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="header__navbar-list">
+                    
+                    <li class="header__navbar-item">
+                        <a href="" class="header__navbar-item-link">
+                            <i class="header__navbar-icon fa-regular fa-circle-question"></i>
+                            Trợ giúp
+                        </a>
+                    </li>
+                    <li class="header__navbar-item header__navbar-item--strong header__navbar-item--seperate"><a href="đăng ki.html" style="text-decoration: none; color: var(--white-color);">Đăng kí</a></li>
+                        <li class="header__navbar-item header__navbar-item--strong"><a href="dangnhap.html" style="text-decoration: none; color: var(--white-color);">Đăng nhập</a></li>
+
+                    <!-- <li class="header__navbar-item header__navbar-user">
+                        <img src="./assets/img/qr_code.png" alt="" class="header__navbar-user-img">
+                        <span class="header__navbar-user-name">Bá Ngọc</span>
+
+                        <ul class="header__navbar-user-menu">
+                            <li class="header__navbar-user-item">
+                                <a href="">Tài khoản của tôi</a>
+                            </li>
+                            <li class="header__navbar-user-item">
+                                <a href="">Địa chỉ của tôi</a>
+                            </li>
+                            <li class="header__navbar-user-item">
+                                <a href="">Đơn mua</a>
+                            </li>
+                            <li class="header__navbar-user-item header__navbar-user-item--separate">
+                                <a href="">Đăng xuất</a>
+                            </li>
+                        </ul>
+                    </li> -->
+                </ul>
+                
+            </nav>
+
+            <!-- header with search -->
+            <div class="header-with-search">
+                <div class="header__logo">
+                    <a href="#" class="header__logo-link">
+                        <img src="./assets/img/logo.png" alt="" class="header__logo-img">
+                    </a>
+                </div>
+
+
+                <div class="header__search">
+                    <div class="header__search-input-wrap">
+                        <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm sản phẩm">
+
+                        <!-- search history -->
+                        <div class="header__search-history">
+                            <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                        </div>
+                    </div>
+                    
+                    <button class="header__search-btn">
+                        <i class="header__search-btn-icon fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+
+                <!-- cart layout -->
+                <div class="header__cart">
+                    <div class="header__cart-wrap">
+                        <i class="header__cart-icon fas fa-shopping-cart"></i>
+                        <span class="header__cart-notice">0</span>
+
+                        <!-- No cart:header__cart-list--no-cart  -->
+                        <div class="header__cart-list header__cart-list--no-cart">
+                            <img src="./assets/img/no-cart.png" alt="" class="header__cart-no-cart-img">
+                            <span class="header__cart-list-no-cart-msg">Chưa có sản phẩm</span>
+                        </div>
+
+                        <div class="header__cart-list header__cart-list--yes-cart" >
+                            <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
+                            <ul class="header__cart-list-item">
+
+                                
+                                <!-- Cart item -->
+                                <!-- <li class="header__cart-item">
+                                    <img src="./assets/img/qr_code.png" alt="" class="header__cart-img">
+                                    <div class="header__cart-item-info">
+                                        <div class="header__cart-item-head">
+                                            <h5 class="header__cart-item-name"></h5>
+                                            <div class="header__cart-item-price-wrap">
+                                                <span class="header__cart-item-price"></span>
+                                                <span class="header__cart-item-multiply"></span>
+                                                <input type="number" class="header__cart-item-quantity" value="1">
+                                            </div>
+                                        </div>
+                                        <div class="header__cart-item-body">
+                                            <span class="header__cart-item-description">
+                                                Phân loại: Bạc
+                                            </span>
+                                            <button class="header__cart-item-remove">Xóa</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="header__cart-item">
+                                    <img src="./assets/img/qr_code.png" alt="" class="header__cart-img">
+                                    <div class="header__cart-item-info">
+                                        <div class="header__cart-item-head">
+                                            <h5 class="header__cart-item-name"></h5>
+                                            <div class="header__cart-item-price-wrap">
+                                                <span class="header__cart-item-price"></span>
+                                                <span class="header__cart-item-multiply">X</span>
+                                                <input type="number" class="header__cart-item-quantity" value="1">
+                                            </div>
+                                        </div>
+                                        <div class="header__cart-item-body">
+                                            <span class="header__cart-item-description">
+                                                Phân loại: Bạc
+                                            </span>
+                                            <button class="header__cart-item-remove">Xóa</button>
+                                        </div>
+                                    </div>
+                                </li> -->
+                                
+                            </ul>
+                            <div class="header__cart-total">
+                                <strong class="cart-total-title">Tổng Cộng:</strong>
+                                <span class="cart-total-price">0VNĐ</span>
+                            </div>
+                            <button class="header__cart-view-cart butn btn--primary">Thanh toán</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="navi">
+        <ul class="navi__list">
+            <li class="navi__item">
+                <a href="trangchu.html" class="navi__item-link" >Trang chủ</a>
+            </li>
+            <li class="navi__item">
+                <a href="sanpham.html" class="navi__item-link">Sản phẩm</a>
+            </li>
+            <li class="navi__item">
+                <a href="blog.html" class="navi__item-link">Blog</a>
+            </li>
+            <li class="navi__item">
+                <a href="lienhe.html" class="navi__item-link">Liên hệ</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="slider slider--home" style="height: 490px;">
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" >
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2000">
+                    <img src="./assets/img/category_kitten_slider.webp" class="d-block w-100" alt="..." >
+                    <div class="slider__info">
+                        <div class="slider__info-heading">Bạn Dự Định Nuôi Mèo Con?</div>
+                        <div class="slider__info-description">Bạn đang suy nghĩ về việc nuôi mèo con? Tìm hiểu những thông tin cần biết trước khi bạn đưa ra quyết định quan trọng này</div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="./assets/img/slider-product.jpg" class="d-block w-100" alt="...">
+                    <div class="slider__info">
+                        <div class="slider__info-heading">Mèo trưởng thành 1+ tuổi</div>
+                        <div class="slider__info-description">Mèo cần một chế độ ăn uống cân bằng và đầy đủ, đặc biệt là protein để tăng khối lượng cơ. Sử dụng thức ăn Whiskas® dành cho mèo trưởng thành từ 1+ tuổi.</div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="main-blog ">
+        <div class="main-blog__nav grid">
+            <ul class="header__navbar-list grid__row" style="justify-content: center; margin: 0;">
+                <li class=" header__navbar-item header__navbar-item--strong main-blog__header--separate main-blog__header " style="text-align: right;"><a href="blog.html" style="text-decoration: none;">MÈO CON</a></li>
+                <li class=" header__navbar-item header__navbar-item--strong main-blog__header main-blog__header--active"><a href="blog-1tuoi.html" style="text-decoration: none;">1+ TUỔI</a></li>
+            </ul>
+        </div>
+
+        <div class="main-blog__list grid">
+            <div class="grid__row" style="justify-content: space-between;">
+                <div class="grid__column-5-8 main-blog__item" >
+                    <div class="main-blog__item-info">
+                        <h1 class="main-blog__item-header">Tự làm đồ chơi cho mèo tại nhà</h1>
+                        <p class="main-blog__item-description">Đã bao giờ bạn chú ý thấy bé mèo cưng ẩn nấp ở đâu đó và bất ngờ bổ nhào xuống bạn chưa? Đó là khi bé mèo đang ‘rình rập’ và ‘săn lùng’ bạn đó.</p>
+                        <button class="butn slider__info-btn news-btn" style="margin-left: 0;">Đọc thêm</button>
+                    </div>
+                    <div class="main-blog__item-img" style="background-image: url(./assets/img/blog/1+tuoi/tulamdochoi.webp);"></div>
+                </div>
+
+                <div class="grid__column-5-8 main-blog__item" >
+                    <div class="main-blog__item-info">
+                        <h1 class="main-blog__item-header">Cùng mèo cưng chơi quanh nhà</h1>
+                        <p class="main-blog__item-description">Mèo cưng thích chơi trò săn mồi, nhưng cũng thích khám phá lãnh thổ của mình. Bằng cách bố trí cho mèo cưng những nơi có thể leo trèo trong nhà nghĩa là bạn đang tạo điều kiện cho mèo vận động, hăng say hơn, ngay cả khi không có đồ chơi xung quanh.</p>
+                        <button class="butn slider__info-btn news-btn" style="margin-left: 0;">Đọc thêm</button>
+                    </div>
+                    <div class="main-blog__item-img" style="background-image: url(./assets/img/blog/1+tuoi/Cungmeochoi.webp);"></div>
+                </div>
+
+
+                <div class="grid__column-5-8 main-blog__item" >
+                    <div class="main-blog__item-info">
+                        <h1 class="main-blog__item-header">Mèo bị dị ứng thức ăn</h1>
+                        <p class="main-blog__item-description">Một số người bị dị ứng với mèo, nhưng bạn có biết rằng một số mèo cũng bị dị ứng với các loại thức ăn khác nhau? Nếu bác sĩ thú y chẩn đoán mèo cưng của bạn bị dị ứng thức ăn, giải pháp đơn giản nhất là đảm bảo mèo không ăn loại thức ăn gây dị ứng.</p>
+                        <button class="butn slider__info-btn news-btn" style="margin-left: 0;">Đọc thêm</button>
+                    </div>
+                    <div class="main-blog__item-img" style="background-image: url(./assets/img/blog/1+tuoi/meobidiung.webp);"></div>
+                </div>
+
+                <div class="grid__column-5-8 main-blog__item" >
+                    <div class="main-blog__item-info">
+                        <h1 class="main-blog__item-header">Tai, mắt và da mèo</h1>
+                        <p class="main-blog__item-description">Mắt và tai của mèo cưng rất nhạy cảm, giống như các loài đại miêu họ hàng trong môi trường hoang dã.</p>
+                        <button class="butn slider__info-btn news-btn" style="margin-left: 0;">Đọc thêm</button>
+                    </div>
+                    <div class="main-blog__item-img" style="background-image: url(./assets/img/blog/1+tuoi/taimatda.webp);"></div>
+                </div>
+
+                <div class="grid__column-5-8 main-blog__item" >
+                    <div class="main-blog__item-info">
+                        <h1 class="main-blog__item-header">Hành vi xã hội của mèo</h1>
+                        <p class="main-blog__item-description">Điều khiến mèo trở nên đặc biệt chính là tinh thần độc lập của chúng. Nhưng liệu thực tế loài mèo có hòa đồng hơn chúng ta nghĩ không?</p>
+                        <button class="butn slider__info-btn news-btn" style="margin-left: 0;">Đọc thêm</button>
+                    </div>
+                    <div class="main-blog__item-img" style="background-image: url(./assets/img/blog/1+tuoi/hanhvixahoi.webp);"></div>
+                </div>
+
+                <div class="grid__column-5-8 main-blog__item" >
+                    <div class="main-blog__item-info">
+                        <h1 class="main-blog__item-header">Hiểu rõ mèo cưng của bạn</h1>
+                        <p class="main-blog__item-description">Giống như các loài đại miêu họ hàng, mọi hành vi của mèo cưng đều theo bản năng tự nhiên. Hiểu rõ những điều này, bạn sẽ thấy hành vi của bé trở nên dễ lý giải hơn.</p>
+                        <button class="butn slider__info-btn news-btn" style="margin-left: 0;">Đọc thêm</button>
+                    </div>
+                    <div class="main-blog__item-img" style="background-image: url(./assets/img/blog/1+tuoi/hieuro.webp);"></div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="grid">
+            <div class="grid__row">
+                <div class="grid__column-2-4">
+                    <h3 class="footer__heading">Chăm sóc khách hàng</h3>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Trung tâm trợ giúp</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Whiskas mall</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Hướng dẫn mua hàng</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+                <div class="grid__column-2-4">
+                    <h3 class="footer__heading">Giới thiệu</h3>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Giới thiệu</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Tuyển dụng</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Điều khoản</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid__column-2-4">
+                    <h3 class="footer__heading">Danh mục</h3>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a href="sanpham-1+tuoi.html" class="footer-item__link">1+ tuổi</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="sanpham-meocon.html" class="footer-item__link">Mèo con</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="sanpham-kho.html" class="footer-item__link">Thức ăn khô</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="sanpham-uot.html" class="footer-item__link">Thức ăn ướt</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="sanpham-mix.html" class="footer-item__link">Tasty Mix</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid__column-2-4">
+                    <h3 class="footer__heading">Theo dõi</h3>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">
+                                <i class="footer-item__icon fa-brands fa-facebook"></i>
+                                Facebook
+                            </a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">
+                                <i class="footer-item__icon fa-brands fa-instagram"></i>
+                                Instagram
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="grid__column-2-4">
+                    <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
+                    <div class="footer__download">
+                        <img src="./assets/img/qr_code.png" alt="" class="footer__download-qr">
+                        <div class="footer__download-apps">
+                            <a href="" class="footer__download-app-link">
+                                <img src="./assets/img/appstore.png" alt="" class="footer__download-app-img">
+                            </a>
+                            <a href="" class="footer__download-app-link">
+                                <img src="./assets/img/ggplay.png" alt="" class="footer__download-app-img">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="footer__bottom">
+            <div class="grid">
+                <p class="footer__text">2023 - Bản quyền thuộc về Công ty Whiskas</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./jvs.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>    
